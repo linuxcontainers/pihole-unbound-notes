@@ -173,6 +173,7 @@ sudo service unbound start
 dig github.com @127.0.0.1 -p 5335
 ```
 ### For people using SELinux
+```
 sudo dnf install policycoreutils-python-utils
 sudo grep unbound /var/log/audit/audit.log | audit2allow -M mypol
 sudo semodule -i mypol.pp
